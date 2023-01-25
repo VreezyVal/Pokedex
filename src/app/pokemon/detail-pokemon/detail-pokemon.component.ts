@@ -18,7 +18,7 @@ export class DetailPokemonComponent implements OnInit {
   ngOnInit(){
     const pokemonId: number | null = Number(this.route.snapshot.paramMap.get('id'));
     if(pokemonId) {
-      this.pokemon = this.pokemonService.getPokemonById(pokemonId);
+      this.pokemon = this.pokemonService.getPokemonById(+pokemonId);
     }
   }
   goToPokemonList() {
